@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Carpage from '../components/carpage'
 import styles from '../styles/Home.module.css'
-import cardata from '../components/cardetails'
-import navbar from '../components/navbar'
+
 
 export default function Home() {
   return (
@@ -17,12 +17,13 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Aniket 
-          <a navbar ></a>
+          <Carpage/>
+          
         </h1>     
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          hi there{' '}
+          <code className={styles.code}>pages/page1</code>
         </p>
 
        

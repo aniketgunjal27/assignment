@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-
 const toyota = (props) => {
   return (
     <div>
+      
     
       {props.cardData.map((car) => (
         <div>
     
           <div>
             <div>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <div className="max-w-md rounded overflow-hidden shadow-lg">
                 <img
                   className="w-full"
                   src={car.photos[0].url}
-                  alt="Sunset in the mountains"
+                  alt="Cards for drive.au"
                 />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">
@@ -21,26 +21,29 @@ const toyota = (props) => {
                   </div>
                   <p className="text-gray-700 text-base">
                     <div className="grid grid-cols-2 gap-4">
-                      <div> { ` ${car.redbook.doors}Doors,  ${car.redbook.seats}Seats` } </div>
-                      <div>{car.redbook.engine}</div>
-                      <div>{ ` ${car.redbook.gears} Speed  ${car.gearType}` }</div>
+                      <div className="list-disc"> { ` ${car.redbook.doors}Doors,  ${car.redbook.seats}Seats` } </div>
+                      <div className="list-disc">{car.redbook.engine}</div>
+                      <div className="list-disc">{ ` ${car.redbook.gears} Speed  ${car.gearType}` }</div>
                       
-                      <div> {car.driveCode}</div>
-                      <div></div>
+                      <div  className="list-disc"> {car.driveCode}</div>
+                     
+                      <div> 
+                        
+                      </div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>Average Kms</div>
-                      <div>{car.redbook.pricing.avgKmsMin}k-{car.redbook.pricing.avgKmsMax}k</div>
+                      <div className="font-bold">{car.redbook.pricing.avgKmsMin}k-{car.redbook.pricing.avgKmsMax}k</div>
                       <div>Trade in Value</div>
-                      <div>${car.redbook.pricing.tradeMin}-${car.redbook.pricing.tradeMax}</div>
+                      <div className="font-bold">${car.redbook.pricing.tradeMin}-${car.redbook.pricing.tradeMax}</div>
                       <div>Private Sale</div>
-                      <div>${car.redbook.pricing.privateMin}-${car.redbook.pricing.privateMax}</div>
+                      <div className="font-bold">${car.redbook.pricing.privateMin}-${car.redbook.pricing.privateMax}</div>
                     </div>
                   </p>
                 </div>
 
                 <li className="flex justify-center py-2 px-2">
-                  <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded  ">
+                  <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-32 rounded  ">
                     Get Offer Now
                   </button>
                 </li>
